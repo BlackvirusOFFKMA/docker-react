@@ -1,7 +1,5 @@
 pipeline{
-    agent{
-        none    
-    }
+    agent none
     stages{
         stage("Build"){
             steps{
@@ -36,6 +34,9 @@ pipeline{
             }
         }
         stage("Deploy"){
+	    steps {
+		echo 'Not now'
+	    }
             post{
                 always{
                     echo "======= No deploy now =========="
